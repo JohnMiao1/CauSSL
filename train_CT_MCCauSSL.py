@@ -44,7 +44,7 @@ class Linear_vector(nn.Module):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str, default='/Pancreas-CT/data_new_norm/', help='Name of Experiment')
-parser.add_argument('--exp', type=str,  default='MCCauSSL_20221205', help='model_name')
+parser.add_argument('--exp', type=str,  default='MCCauSSL', help='model_name')
 parser.add_argument('--max_iterations', type=int,  default=5000, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=4, help='batch_size per gpu')
 parser.add_argument('--labeled_bs', type=int, default=2, help='labeled_batch_size per gpu')

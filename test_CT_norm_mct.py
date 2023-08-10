@@ -15,8 +15,8 @@ import pandas as pd
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str, default='Pancreas-CT/data_new_norm/', help='Name of Experiment')
-parser.add_argument('--model', type=str,  default='vnet_mct_T3_less_1220', help='model_name')
-parser.add_argument('--gpu', type=str,  default='7', help='GPU to use')
+parser.add_argument('--model', type=str,  default='vnet_mct_T3', help='model_name')
+parser.add_argument('--gpu', type=str,  default='0', help='GPU to use')
 FLAGS = parser.parse_args()
 
 os.environ['CUDA_VISIBLE_DEVICES'] = FLAGS.gpu

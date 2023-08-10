@@ -50,14 +50,14 @@ class Linear_vector(nn.Module):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str, default='/Pancreas-CT/data_new_norm/', help='Name of Experiment')
-parser.add_argument('--exp', type=str,  default='CPSCauSSL_20221221', help='model_name')
+parser.add_argument('--exp', type=str,  default='CPSCauSS', help='model_name')
 parser.add_argument('--max_iterations', type=int,  default=5000, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=4, help='batch_size per gpu')
 parser.add_argument('--labeled_bs', type=int, default=2, help='labeled_batch_size per gpu')
 parser.add_argument('--base_lr', type=float,  default=0.01, help='maximum epoch number to train')
 parser.add_argument('--deterministic', type=int,  default=1, help='whether use deterministic training')
 parser.add_argument('--seed', type=int,  default=1337, help='random seed')
-parser.add_argument('--gpu', type=str,  default='7', help='GPU to use')
+parser.add_argument('--gpu', type=str,  default='0', help='GPU to use')
 ### costs
 parser.add_argument('--ema_decay', type=float,  default=0.99, help='ema_decay')
 parser.add_argument('--consistency_type', type=str,  default="mse", help='consistency_type')
@@ -343,9 +343,9 @@ if __name__ == "__main__":
 
         return avg_metric
 
-    nums = [1000, 2000, 3000, 4000, 5000]
-    first_list = np.zeros([5, 4])
-    second_list = np.zeros([5, 4])
+    nums = [5000]
+    first_list = np.zeros([1, 4])
+    second_list = np.zeros([1, 4])
     count = 0
     for i in nums:
         metric1 = test_calculate_metric_1(i)
