@@ -8,8 +8,7 @@ We provide the codes for CPSCauSSL and MCCauSSL with the 3D V-Net architecture t
 
 1. Pytorch
 2. TensorBoardX
-3. Python == 3.6
-4. Some basic python packages such as Numpy
+3. Some basic python packages such as Numpy
 
 ### Usage
    
